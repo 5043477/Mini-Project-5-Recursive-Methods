@@ -1,39 +1,46 @@
+//imput your package for your scanner here
 import java.util.Scanner;
 
-class Main {
+//then put your class name
+public class Main {
   public static void main(String[] args) {
+    // here put scanner
     Scanner scan = new Scanner(System.in);
-  System.out.println("Welcome! when is your birthday?");
-   int getDay = scan.nextInt();
-    System.out.println("when is your birthday?");
-    int getYear = scan.nextInt();
+    // create your values here
+System.out.println("what is your first name?");
+    String firstName = scan.next();
+    System.out.println("what is your last name");
+    String lastName = scan.next();
+    System.out.println("what is your full name?");
+    String getName = scan.next();
+    
+    System.out.println("what school do you go to?");
+    String school = scan.next();
+    System.out.println("what year are whe in right now?");
+    int currentYear = scan.nextInt();
+    System.out.println("what year were you born in? ");
+    int birthYear = scan.nextInt();
+    // print your message here
+    String name = firstName + lastName;
+    System.out.println("your full name is " + firstName + lastName);
+    int age = getAge(birthYear, currentYear);    System.out.println("this is your age " + age + " for the current year" + " and you go to school at " + school);
+    
   }
- //start off your method here. this method is suppost to help you find what day your birthday is on
-static int getYear(int year) {
-    int Years = year;
-    return Years;
-}  
-static int getDay(int birthday, int totalDays) {
-    int getDay = birthday - totalDays;
-    return getDay;
- }
-  //recursion is calling a method within itself
- {
-    int result = sum(5);
-    System.out.println(result);
+
+  // getAge method calculates getAge
+  static int getAge(int birthYear, int currentYear) {
+    int age = currentYear - birthYear;
+    return age;
   }
-    public static int sum(int num1)
-  {
-    if(num1 > 0)
-    {
-   return num1 + sum(num1 - 1);
-   //5 + 10 = 15
-   //4 + 6 = 10
-   //3 + 3 = 6
-   //2 + 1 = 3
-   //1 + 0 = 1
-    }else{
-      return 0;
-    }
+  //full name method
+static String getName(String firstName, String lastName) {
+    String name = firstName + lastName;
+    return name;
   }
+  // school method
+  static String greeting(String school) {
+    String hello = "your school name is " + school;
+    return hello;
+  }
+  
 }
